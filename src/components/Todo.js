@@ -37,10 +37,13 @@ const Todo = () => {
 
   return (
     <div className='container'>
-        <input type="text" name="title" id="title" value={input} onChange={(e)=>{
-            setInput(e.target.value);
-        }}/>
-        <button onClick={addTodo}>add</button>
+        <h1>Todo List</h1>
+        <div className='head'>
+            <input type="text" name="title" id="title" value={input} onChange={(e)=>{
+                setInput(e.target.value);
+            }}/>
+            <button onClick={addTodo} className='btn btn-add'>Add Todo</button>
+        </div>
         <div>
             {
                 (todo).map((val, index)=>{
@@ -50,8 +53,8 @@ const Todo = () => {
                                 {val.title}
                             </div>
                             <div>
-                                {(!val.done) && <button onClick={()=>updateTodo(val)}>Done</button>}
-                                <button onClick={()=>deleteTodo(val)}>Delete</button>
+                                {(!val.done) && <button onClick={()=>updateTodo(val)} className='done-btn btn'>Done</button>}
+                                <button onClick={()=>deleteTodo(val)} className='del-btn btn'>Delete</button>
                             </div>
                         </div>
                     )

@@ -42,16 +42,66 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 300px;
+  width: 400px;
   justify-content: space-between;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: aliceblue;
+  width: 800px;
+  margin: auto;
+  margin-top: 10px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  border-radius: 20px;
 }
 
 .done {
   text-decoration: line-through;
+}
+
+h1{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.done-btn {
+  background-color : #10647b;
+  color: white;
+}
+
+.del-btn {
+  color : white;
+  background-color: #811313;
+
+}
+
+input {
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.head{
+  display: flex;
+}
+
+.btn {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: green;
+  color: white
 }
